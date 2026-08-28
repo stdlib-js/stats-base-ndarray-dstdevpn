@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-10)
+## Unreleased (2026-08-28)
+
+<section class="features">
+
+### Features
+
+-   [`ea76311`](https://github.com/stdlib-js/stdlib/commit/ea76311ab879cd4cac40c347a0a7cca1c20e2292) - add C implementation for `stats/base/ndarray/dstdevpn` [(#14711)](https://github.com/stdlib-js/stdlib/pull/14711)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`ea76311`](https://github.com/stdlib-js/stdlib/commit/ea76311ab879cd4cac40c347a0a7cca1c20e2292) - **feat:** add C implementation for `stats/base/ndarray/dstdevpn` [(#14711)](https://github.com/stdlib-js/stdlib/pull/14711) _(by Ujjwal Verma)_
 -   [`056a080`](https://github.com/stdlib-js/stdlib/commit/056a080213e54c3030bb98128e96b26b4139627a) - **refactor:** remove unused generics [(#12495)](https://github.com/stdlib-js/stdlib/pull/12495) _(by Philipp Burckhardt)_
 -   [`a403638`](https://github.com/stdlib-js/stdlib/commit/a403638f69923986e5da20a2ad8e4f9653b8eef6) - **chore:** modernize examples and benchmarks _(by Athan Reines)_
 
@@ -25,10 +36,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Philipp Burckhardt
+-   Ujjwal Verma
 
 </section>
 
