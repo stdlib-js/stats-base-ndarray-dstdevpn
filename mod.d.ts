@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,10 +16,11 @@
 * limitations under the License.
 */
 
-#include "stdlib/stats/base/ndarray/dstdevpn.h"
-#include "stdlib/stats/strided/dstdevpn.h"
-#include "stdlib/ndarray/ctor.h"
-#include "stdlib/blas/base/shared.h"
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { float64ndarray, typedndarray } from '@stdlib/types/ndarray';
 
 /**
 * Computes the standard deviation of a one-dimensional double-precision floating-point ndarray using a two-pass algorithm.
@@ -31,14 +32,26 @@
 *     -   a one-dimensional input ndarray.
 *     -   a zero-dimensional ndarray specifying the degrees of freedom adjustment.
 *
-* @param arrays    list containing ndarrays
-* @return          standard deviation
+* @param arrays - array-like object containing ndarrays
+* @returns standard deviation
+*
+* @example
+* var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
+* var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+*
+* var opts = {
+*     'dtype': 'float64'
+* };
+*
+* var x = new Float64Vector( [ 1.0, -2.0, 2.0 ] );
+* var correction = scalar2ndarray( 1.0, opts );
+*
+* var v = dstdevpn( [ x, correction ] );
+* // returns ~2.0817
 */
-double stdlib_stats_dstdevpn( const struct ndarray *arrays[] ) {
-	const struct ndarray *x = arrays[ 0 ];
+declare function dstdevpn( arrays: [ float64ndarray, typedndarray<number> ] ): number;
 
-	double correction;
-	stdlib_ndarray_get_float64( arrays[ 1 ], NULL, &correction );
 
-	return API_SUFFIX(stdlib_strided_dstdevpn_ndarray)( stdlib_ndarray_dimension( x, 0 ), correction, (const double *)stdlib_ndarray_data( x ), stdlib_ndarray_stride_elements( x, 0 ), stdlib_ndarray_offset_elements( x ) );
-}
+// EXPORTS //
+
+export = dstdevpn;
